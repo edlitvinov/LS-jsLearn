@@ -2,8 +2,8 @@
 
 // HW 1.5
 
-let retArr = (a, b, c) => [a, b, c];
-console.log(retArr(4, 9, 13));
+// let retArr = (a, b, c) => [a, b, c];
+// console.log(retArr(4, 9, 13));
 
 //HW 1.4
 // let  num = 10;
