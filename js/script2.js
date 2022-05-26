@@ -2,15 +2,38 @@
 
 // day 3 DOM
 
-const myBut = document.querySelector('#myBut');
-myBut.addEventListener('click', function() {
-    container.style.color = 'red';
-});
+const phone = document.querySelector('#phone');
+phone.addEventListener('keydown', function(event) {
+    let isDigit = false;     // флаг состояния
+    let isDash = false;
+    let isControl = false;
 
-const container = document.querySelector('#container');
-container.addEventListener('click', function() {
-    console.log('click container');
-});
+    if(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Delete' || event.key == 'End') {
+        isControl = true;
+    }
+             
+    if (event.key == '-') {
+        isDash = true;
+    }
+    if(event.key >= 0 || event.key <= 9) {
+        isDigit = true; 
+    }
+    if(!isDigit && !isDash && !isControl) {
+        event.preventDefault(); // отмена по-дефолту
+    }
+    console.log(event.key);
+})
+
+
+// const myBut = document.querySelector('#myBut');
+// myBut.addEventListener('click', function() {
+//     container.style.color = 'red';
+// });
+
+// const container = document.querySelector('#container');
+// container.addEventListener('click', function() {
+//     console.log('click container');
+// });
 
 
 // const element = document.createElement('div');
