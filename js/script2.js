@@ -2,13 +2,24 @@
 
 // day 3 DOM
 
-const element = document.createElement('div');
+const myBut = document.querySelector('#myBut');
+myBut.addEventListener('click', function() {
+    container.style.color = 'red';
+});
+
 const container = document.querySelector('#container');
-const element2 = document.createElement('span');
-container.appendChild(element);
-element.textContent = 'text in div';
-container.appendChild(element2);
-element2.textContent = 'text in span';
+container.addEventListener('click', function() {
+    console.log('click container');
+});
+
+
+// const element = document.createElement('div');
+// const container = document.querySelector('#container');
+// const element2 = document.createElement('span');
+// container.appendChild(element);
+// element.textContent = 'text in div';
+// container.appendChild(element2);
+// element2.textContent = 'text in span';
 
 
 // day 2
