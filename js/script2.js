@@ -1,11 +1,26 @@
 'use strict';
 
+// day 3 DOM
+
+const element = document.createElement('div');
+const container = document.querySelector('#container');
+const element2 = document.createElement('span');
+container.appendChild(element);
+element.textContent = 'text in div';
+container.appendChild(element2);
+element2.textContent = 'text in span';
 
 
 // day 2
+// console.
+// console.log('привет!');
+// console.log('привет', 'JavaScript');
+// console.info('info');
+// console.warn('warn');
+// console.error('error');
 
 // итераторы
-
+/*
 function range(from, to) {
     let objWithIterator = {};
     objWithIterator[Symbol.iterator] = function() {
@@ -27,7 +42,7 @@ function range(from, to) {
 for (const number of range(0, 15)) {
     console.log(number);
 }
-
+*/
 
 // let iterator = {
 //     next() {
