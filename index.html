@@ -8,14 +8,47 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <input type="text" id="phone">
+    <form id="myForm">
+    <div>
+        Name:<br>
+        <input type="text" name="Name">
+    </div>
+    <div>
+        LstName:<br>
+        <input type="text" name="LastName">
+    </div>
+    <div>
+        Gender:<br>
+        <select name="gender">
+            <option value="m">M</option>
+            <option value="f">F</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox" name="auto">cars
+    </div>
+    <br>
+    <button id="sendButton">send</button>
+    </form>
+    
+    <!-- <input type="text" id="phone"> -->
     <!-- <div id="container">
         Hi, JavaScript!
         <div class="hello">Hello, JavaScript!</div>
         <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">start learning JS!</a>
     </div> -->
     <!-- <button id="myBut">push mi!</button> -->
-    <script src="js/script.js"></script>
-    <script src="js/script2.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/script2.js"></script> -->
+    <script>
+        const myForm = document.querySelector("#myForm");
+        const sendButton = document.querySelector("#sendButton");
+
+        sendButton.addEventListener('ckick', function(event) {
+            event.preventDefault();
+
+            console.log(myForm.elements.Name.value);
+        });
+    </script>
 </body>
 </html> 

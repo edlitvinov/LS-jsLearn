@@ -1,28 +1,39 @@
-'use strict';
+
 
 // day 3 DOM
 
-const phone = document.querySelector('#phone');
-phone.addEventListener('keydown', function(event) {
-    let isDigit = false;     // флаг состояния
-    let isDash = false;
-    let isControl = false;
+// Forms
 
-    if(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Delete' || event.key == 'End') {
-        isControl = true;
-    }
+const myForm = document.querySelector('#myForm');
+const sendButton = document.querySelector('#sendButton');
+
+sendButton.addEventListener('ckick', function(event) {
+    event.preventDefault();
+
+    console.log(myForm.elements.Name.value);
+});
+
+// const phone = document.querySelector('#phone');
+// phone.addEventListener('keydown', function(event) {
+//     let isDigit = false;     // флаг состояния
+//     let isDash = false;
+//     let isControl = false;
+
+//     if(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Delete' || event.key == 'End') {
+//         isControl = true;
+//     }
              
-    if (event.key == '-') {
-        isDash = true;
-    }
-    if(event.key >= 0 || event.key <= 9) {
-        isDigit = true; 
-    }
-    if(!isDigit && !isDash && !isControl) {
-        event.preventDefault(); // отмена по-дефолту
-    }
-    console.log(event.key);
-})
+//     if (event.key == '-') {
+//         isDash = true;
+//     }
+//     if(event.key >= 0 || event.key <= 9) {
+//         isDigit = true; 
+//     }
+//     if(!isDigit && !isDash && !isControl) {
+//         event.preventDefault(); // отмена по-дефолту
+//     }
+//     console.log(event.key);
+// })
 
 
 // const myBut = document.querySelector('#myBut');
